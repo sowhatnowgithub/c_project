@@ -1,7 +1,5 @@
 /*
 	Description the project
-		this is a basic DBMS for Bank . Using basic Filehandling . 
-		i have done this project with a friend
 */
 
 
@@ -175,22 +173,13 @@ void account_creation(){
     fprintf(ac_no_ptr,"%d\n",account_number);
     fclose(ac_no_ptr);
     char ac_no[14];
-    char folder[100] ="users/";    
-		printf("2 %d\n",balance);
-		
-
+    char folder[100] ="users/";    	
     sprintf(ac_no,"%d", account_number);   // we are changing integer variable into string with the help of sprintf function
-	printf("3 %d\n",balance);
     strcat(ac_no,"_id.txt"); 
     strcat(folder,ac_no);             // strcat adds two strings and stores in first string
-    printf("4 %d",balance);
 	strcpy(ac_no,folder);
-   	printf("5 %d\n",balance);
-
     ac_file_ptr = fopen(ac_no,"w");
     fprintf(ac_file_ptr,"%s\n",name);
-		printf("6 %d\n",balance);
-
     fprintf(ac_file_ptr,"%d\n",money);
     fprintf(ac_file_ptr,"%d\n",age); 
     fprintf(ac_file_ptr,"%d\n",account_number);    
